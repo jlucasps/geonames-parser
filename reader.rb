@@ -17,12 +17,11 @@ class Reader
   def parse
     @file.readlines(self.line_separator).map do |line|
       unless line.start_with?("#")
-        puts line
         hash = {}
         line.split(self.column_separator).each_with_index  do |column_value, index|
           hash[self.column_names[index]] = column_value.strip
         end
-        OpenStruct.new(hash).inspect
+        OpenStruct.new(hash)
       end
     end
   end

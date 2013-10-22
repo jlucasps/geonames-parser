@@ -1,0 +1,12 @@
+# Countries sample																		
+# ================================																		
+#																		
+
+#ISO	ISO3	ISO-Numeric	fips	Country	Capital	Area(in sq km)	Population	Continent	tld	CurrencyCode	CurrencyName	Phone	Postal Code Format	Postal Code Regex	Languages	geonameid	neighbours	EquivalentFipsCode
+
+AT	AUT	040	AU	Austria	Vienna	83858	8205000	EU	.at	EUR	Euro	43	####	^(\d{4})$	de-AT,hr,hu,sl	2782113	CH,DE,HU,SK,CZ,IT,SI,LI	
+
+BR	BRA	076	BR	Brazil	Brasilia	8511965	201103330	SA	.br	BRL	Real	55	#####-###	^(\d{8})$	pt-BR,es,en,fr	3469034	SR,PE,BO,UY,GY,PY,GF,VE,CO,AR	
+
+AN	ANT	530	NT	Netherlands Antilles	Willemstad	960	136197	NA	.an	ANG	Guilder	599			nl-AN,en,es		GP	
+

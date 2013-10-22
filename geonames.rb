@@ -5,7 +5,7 @@ country_columns = [:iso, :iso_3, :iso_numeric, :fips, :name, :capital, :area, :p
            :postal_code_format, :postal_code_regex, :languages, :geoname_id, :neighbours,
            :equivalent_fips_code]
 
-reader = Reader.new('countryInfo.txt', country_columns)
+reader = Reader.new('countryInfo_test.txt', country_columns)
 puts reader.parse
 
 # city_columns = [:geoname_id, :name, :ascii_name, :alternate_names, :latitude, :longitude,
