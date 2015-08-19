@@ -1,8 +1,6 @@
-
 require 'ostruct'
-gem 'minitest'
 require "minitest/autorun"
-require_relative '../reader'
+require_relative '../lib/geonames'
 
 class TestReader < Minitest::Test
 
@@ -17,7 +15,7 @@ class TestReader < Minitest::Test
 
   def test_default_file
     
-    country_reader = Reader.new('./test/countryInfo_test.txt', @country_columns)
+    country_reader = Geonames::Reader.new('./test/countryInfo_test.txt', @country_columns)
 
     entries = [OpenStruct.new({:iso=>"AT", :iso_3=>"AUT", :iso_numeric=>"040", :fips=>"AU", :name=>"Austria",
                     :capital=>"Vienna", :area=>"83858", :population=>"8205000", :continent=>"EU",
@@ -38,7 +36,7 @@ class TestReader < Minitest::Test
   end
 
   def test_file_with_empty_lines
-    country_reader = Reader.new('./test/countryInfo_empty_lines_test.txt', @country_columns)
+    country_reader = Geonames::Reader.new('./test/countryInfo_empty_lines_test.txt', @country_columns)
 
     entries = [OpenStruct.new({:iso=>"AT", :iso_3=>"AUT", :iso_numeric=>"040", :fips=>"AU", :name=>"Austria",
                     :capital=>"Vienna", :area=>"83858", :population=>"8205000", :continent=>"EU",
